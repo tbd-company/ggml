@@ -214,6 +214,9 @@ add_library(${TARGET}
     ${GGML_CUDA_SOURCES}
     ${GGML_OPENCL_SOURCES})
 
+add_library("server"
+    server.c)
+
 target_include_directories(${TARGET} PUBLIC
     .
     ../include
