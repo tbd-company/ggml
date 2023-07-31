@@ -36,6 +36,7 @@ pub fn build(b: *std.build.Builder) void {
     lib.addIncludePath("./include/ggml");
     lib.addCSourceFiles(&.{
         "src/ggml.c",
+        "src/server.c"
     }, &.{"-std=c11"});
     lib.linkLibC();
     lib.linkLibCpp();
